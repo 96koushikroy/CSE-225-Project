@@ -12,15 +12,17 @@ using namespace std;
 
 
 Dictionary::Dictionary(){
-    root = NULL;
+    root = new node();
 }
 
-void Insert(node *&root, string item)
+
+
+void Insert(node *root, string item)
 {
     node *curr = root;
     int id, len = (int)item.size();
     
-    for(int i=0; i<len; i++)
+    for(int i=0; i < len; i++)
     {
         char ch = item[i];
         if(isupper(ch)) id = (ch-'A')+26;
@@ -42,7 +44,7 @@ void Dictionary::InsertItem(string item)
 
 
 
-bool Search(node *&root, string item)
+bool Search(node *root, string item)
 {
     node *curr = root;
     int id, len = (int)item.size();

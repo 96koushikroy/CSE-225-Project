@@ -32,7 +32,6 @@ class Dictionary
     Dictionary();
     //~Dictionary();
     
-    
     void InsertItem(string);
     bool SearchItem(string);
     
