@@ -2,25 +2,53 @@
 //  main.cpp
 //  Dictionary
 //
-//  Created by Nur Islam on 4/20/17.
-//  Copyright © 2017 nur islam. All rights reserved.
+//  Created by Nur Islam & Koushik Roy on 4/20/17.
+//  Copyright © 2017 O(1). All rights reserved.
 //
 
 #include <iostream>
 #include "Dictionary.hpp"
+#include <fstream>
+#include <sstream>
+#include <string>
 using namespace std;
 
 
+Dictionary a;
+
+void BuildTree()
+{
+    ifstream fin;
+    //fin.open("/Users/nurislam/Google Drive/NSU/CSE - Project/CSE-225-Project/data.txt");
+    fin.open("data.txt");
+    //fin.open("data.txt", fstream::in | fstream::out | fstream::app);
+    
+
+    while(!fin.eof())
+    {
+        string word,meaning;
+        fin >> word;
+        fin.ignore();
+        getline(fin, meaning);
+        
+        //cout << "word : " << word << endl;
+        //cout << " Meaning : " << meaning << endl;
+        a.InsertItem(word, meaning);
+    }
+    
+    fin.close();
+}
 
 
 int main(int argc, const char * argv[]) {
-    Dictionary a;
     
-    a.InsertItem("Hello","Greetings from Koushik Roy1");
-    a.InsertItem("Helloh","Greetings from Koushik Roy2");
-    a.InsertItem("Hellohh","Greetings from Koushik Roy3");
+    BuildTree();
     
-    a.SearchItem("Hello1");
+    string s;
     
-    return 0;
+    while(cin >> s){
+        if(s == "---")break;
+        a.SearchItem(s);
+    }
+    
 }

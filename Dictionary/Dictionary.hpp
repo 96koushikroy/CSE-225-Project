@@ -2,8 +2,8 @@
 //  Dictionary.hpp
 //  Dictionary
 //
-//  Created by Nur Islam on 4/20/17.
-//  Copyright © 2017 nur islam. All rights reserved.
+//  Created by Nur Islam & Koushik Roy on 4/20/17.
+//  Copyright © 2017 O(1). All rights reserved.
 //
 
 #ifndef Dictionary_hpp
@@ -44,14 +44,17 @@ class Dictionary
     
     void InsertItem(string, string);
     void SearchItem(string);
+    string Word(int);
+    void WordSetter(int,string);
     
-    //void DeleteItem(ItemType item);
     
     private :
     node *root;
     int wordCounter;
+    string word[100000];
     
 };
+
 
 
 

@@ -2,8 +2,8 @@
 //  Dictionary.cpp
 //  Dictionary
 //
-//  Created by Nur Islam on 4/20/17.
-//  Copyright © 2017 nur islam. All rights reserved.
+//  Created by Nur Islam & Koushik Roy on 4/20/17.
+//  Copyright © 2017 O(1). All rights reserved.
 //
 
 #include "Dictionary.hpp"
@@ -17,6 +17,13 @@ Dictionary::Dictionary(){
 }
 
 
+string Dictionary::Word(int ID){
+    return word[ID];
+}
+
+void Dictionary::WordSetter(int ID, string w){
+    word[ID] = w;
+}
 
 void Insert(node *root, string item, string meaning, int cnt)
 {
@@ -37,12 +44,14 @@ void Insert(node *root, string item, string meaning, int cnt)
     curr->endmark = true;
     curr->wordMeaning = meaning;
     curr->wordID = cnt;
+    
 }
 
 
 void Dictionary::InsertItem(string item, string meaning)
 {
     Insert(root, item, meaning,++wordCounter);
+    WordSetter(wordCounter,item);
 }
 
 
@@ -75,6 +84,11 @@ void Dictionary::SearchItem(string item)
     Pair res = isFound(root, item);
     cout << res.wordId << " " << res.meaning << endl;
 }
+
+
+
+
+
 
 
 
