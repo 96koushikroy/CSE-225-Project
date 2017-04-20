@@ -16,12 +16,11 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     Dictionary a;
     
-    a.InsertItem("Hello");
-    a.InsertItem("Helloh");
-    a.InsertItem("Hellohh");
+    a.InsertItem("Hello","Greetings from Koushik Roy1");
+    a.InsertItem("Helloh","Greetings from Koushik Roy2");
+    a.InsertItem("Hellohh","Greetings from Koushik Roy3");
     
-    cout << a.SearchItem("hello") << endl;
-    cout << a.SearchItem("Helloh") << endl;
+    a.SearchItem("Hello1");
     
     return 0;
 }

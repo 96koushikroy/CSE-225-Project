@@ -13,11 +13,12 @@ using namespace std;
 
 Dictionary::Dictionary(){
     root = new node();
+    wordCounter = 0;
 }
 
 
 
-void Insert(node *root, string item)
+void Insert(node *root, string item, string meaning, int cnt)
 {
     node *curr = root;
     int id, len = (int)item.size();
@@ -34,20 +35,22 @@ void Insert(node *root, string item)
         curr = curr->next[id];
     }
     curr->endmark = true;
+    curr->wordMeaning = meaning;
+    curr->wordID = cnt;
 }
 
 
-void Dictionary::InsertItem(string item)
+void Dictionary::InsertItem(string item, string meaning)
 {
-    Insert(root, item);
+    Insert(root, item, meaning,++wordCounter);
 }
 
 
 
-bool Search(node *root, string item)
+Pair isFound(node *root, string item)
 {
     node *curr = root;
-    int id, len = (int)item.size();
+    int id, len = (int)item.size(), wID = -1; string wM = "Not Found";
     
     for(int i=0; i<len; i++)
     {
@@ -55,17 +58,26 @@ bool Search(node *root, string item)
         if(isupper(ch)) id = (ch-'A')+26;
         else id = (ch-'a');
         
-        if(curr->next[id] == NULL) return false;
+        if(curr->next[id] == NULL) return {wM,wID};
         curr = curr->next[id];
     }
-    return curr->endmark;
+    
+    wM = curr->wordMeaning;
+    wID = curr->wordID;
+    
+    
+    return {wM,wID};
 }
 
 
-bool Dictionary::SearchItem(string item)
+void Dictionary::SearchItem(string item)
 {
-    return Search(root, item);
+    Pair res = isFound(root, item);
+    cout << res.wordId << " " << res.meaning << endl;
 }
+
+
+
 
 
 

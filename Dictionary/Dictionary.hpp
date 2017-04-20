@@ -17,6 +17,8 @@ using namespace std;
 struct node
 {
     bool endmark;
+    int wordID;
+    string wordMeaning;
     node *next[52+2];
     
     node(){
@@ -26,19 +28,28 @@ struct node
     }
 };
 
+struct Pair
+{
+    string meaning;
+    int wordId;
+};
+
+
+
 class Dictionary
 {
     public :
     Dictionary();
     //~Dictionary();
     
-    void InsertItem(string);
-    bool SearchItem(string);
+    void InsertItem(string, string);
+    void SearchItem(string);
     
     //void DeleteItem(ItemType item);
     
     private :
     node *root;
+    int wordCounter;
     
 };
 
