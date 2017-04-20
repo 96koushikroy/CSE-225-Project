@@ -7,9 +7,21 @@
 //
 
 #include <iostream>
+#include "Dictionary.hpp"
+using namespace std;
+
+
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    Dictionary a;
+    
+    a.InsertItem("Hello");
+    a.InsertItem("Helloh");
+    a.InsertItem("Hellohh");
+    
+    cout << a.SearchItem("hello") << endl;
+    cout << a.SearchItem("Helloh") << endl;
+    
     return 0;
 }

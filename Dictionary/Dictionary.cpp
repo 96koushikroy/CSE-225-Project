@@ -11,17 +11,14 @@
 using namespace std;
 
 
-template <class ItemType>
-Tree <ItemType> :: Tree(){
+Dictionary::Dictionary(){
     root = NULL;
 }
 
-
-template <class ItemType>
-void Insert(Tree<ItemType> *&root, ItemType item)
+void Insert(node *&root, string item)
 {
     node *curr = root;
-    int id, len = strlen(item);
+    int id, len = (int)item.size();
     
     for(int i=0; i<len; i++)
     {
@@ -37,19 +34,18 @@ void Insert(Tree<ItemType> *&root, ItemType item)
     curr->endmark = true;
 }
 
-template <class ItemType>
-void Tree <ItemType> :: InsertItem(ItemType item)
+
+void Dictionary::InsertItem(string item)
 {
     Insert(root, item);
 }
 
 
 
-template <class ItemType>
-bool Search(Tree<ItemType> *&root, ItemType item)
+bool Search(node *&root, string item)
 {
     node *curr = root;
-    int id, len = strlen(item);
+    int id, len = (int)item.size();
     
     for(int i=0; i<len; i++)
     {
@@ -63,8 +59,8 @@ bool Search(Tree<ItemType> *&root, ItemType item)
     return curr->endmark;
 }
 
-template <class ItemType>
-bool Tree <ItemType> :: SearchItem(ItemType item)
+
+bool Dictionary::SearchItem(string item)
 {
     return Search(root, item);
 }

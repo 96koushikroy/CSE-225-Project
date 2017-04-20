@@ -14,7 +14,6 @@
 using namespace std;
 
 
-template <class ItemType>
 struct node
 {
     bool endmark;
@@ -27,19 +26,21 @@ struct node
     }
 };
 
-template <class ItemType>
-class Tree
+class Dictionary
 {
     public :
-    Tree();
-    ~Tree();
+    Dictionary();
+    //~Dictionary();
     
-    void InsertItem(ItemType item);
-    bool SearchItem(ItemType item);
+    
+    void InsertItem(string);
+    bool SearchItem(string);
+    
     //void DeleteItem(ItemType item);
     
     private :
-    node <ItemType> *root;
+    node *root;
+    
 };
 
 
