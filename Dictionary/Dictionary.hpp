@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <vector>
 using namespace std;
 
 
@@ -43,15 +44,19 @@ class Dictionary
     //~Dictionary();
     
     void InsertItem(string, string);
-    void SearchItem(string);
+    Pair SearchItem(string);
+    void addSynonym(string,string);
     string Word(int);
     void WordSetter(int,string);
-    
+    vector <string> getSynonymList(string);
+    void SynonymDFS(vector<string>&,int);
     
     private :
     node *root;
     int wordCounter;
     string word[100000];
+    vector < int > Synonym[100000];
+    
     
 };
 
