@@ -13,7 +13,7 @@ To keep the everything as simple as possible, we included 2 common features just
 
 > **Word Meaning Module**
 
-> Trie Data Structure was used to solve this. At the end of every node the meaning of the word was kept.
+> Trie Data Structure was used to solve this. At the end of every node the meaning of the word was kept. So, for a search key the Time Complexity of the search was O(key_length).
 
 > **Synonym Module**
 
