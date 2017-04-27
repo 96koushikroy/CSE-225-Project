@@ -1,5 +1,2 @@
-program programming
-programming hello
-science mobile
-mobile university
-computer mobile
+issue controversy
+quarrel controversy
