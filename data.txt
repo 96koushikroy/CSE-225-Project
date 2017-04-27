@@ -872,8 +872,6 @@ atrocious
 Outrageously or wantonly wicked, criminal, vile, or cruel.
 atrocity
 Great cruelty or reckless wickedness.
-attaché
-A subordinate member of a diplomatic embassy.
 attest
 To certify as accurate, genuine, or true.
 attorney-general
@@ -1148,8 +1146,6 @@ birthright
 A privilege or possession into which one is born.
 bitterness
 Acridity, as to the taste.
-blasé
-Sated with pleasure.
 blaspheme
 To indulge in profane oaths.
 blatant
@@ -9124,7 +9120,7 @@ zoo
 A place where animals are kept for the public to look at and study.
 brain
 the part of the central nervous system enclosed in the cranium of humans and other vertebrates, consisting of a soft, convoluted mass of gray and white matter and serving to control and coordinate the mental and physical actions.
-CPU
+cpu
 The Central Processing Unit of the computer.
 address
 the place or the name of the place where a person, organization, or the like is located or may be reached.

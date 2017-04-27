@@ -1,8 +1,6 @@
 //
 //  Dictionary.cpp
 //  Dictionary
-//
-//  Created by Nur Islam & Koushik Roy on 4/20/17.
 //  Copyright © 2017 O(1). All rights reserved.
 //
 
