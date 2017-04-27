@@ -78,7 +78,7 @@ int main(int argc, const char * argv[]) {
         Pair WordInfo = a.SearchItem(s);
         cout << endl;
         if(WordInfo.wordId < 1){
-            cout << "No meanings were found for this word." << endl;
+            cout << "No meanings were found for " << "'" << s << "'" << "." << endl;
             cout << endl;
         }
         else{
