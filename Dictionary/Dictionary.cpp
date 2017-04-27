@@ -63,7 +63,7 @@ Pair isFound(node *root, string item)
 {
     node *curr = root;
     int id, len = (int)item.size(), wID = -1; string wM = "Not Found";
-    
+    if(!isalpha(item[0])) return {wM,wID};
     for(int i=0; i<len; i++)
     {
         char ch = item[i];
